@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <!--Cesar O. Torres Rodriguez - Tarea 3.1-->
+  </head>
+ <body>
+    <article>
+      <h2>Lista de contactos favoritos</h2>
+    </article>
+      <ol id="list"> </ol>
+    <script>
+      function contactosFavoritos()
+      { 
+      var contactos=["Mayne","Pedro","Carlos","Cesar","Miguel"];
+        
+        var arrayLength = contactos.length;
+        
+        console.log(arrayLength); 
+        
+        for(let contador=0; contador< arrayLength; contador++)
+          {
+            let ver = document.getElementById("list");
+            ver.innerHTML += "<li>"+contactos[contador] + "</li>";
+          }
+        if (window.addEventListener) {
+          window.addEventListener("load",contactosFavoritos, false);
+        }
+        else if (window.attachEvent) {window.attachEvent("onload", contactosFavoritos);
+                     }    
+            
+            
+          }
+      
+      
+      window.addEventListener ("load", contactosFavoritos, false);
+      
+    </script>
+    
+    
+</body>
+</html>
+  
